@@ -1,16 +1,16 @@
-- include: packages.yml
+- include_tasks: packages.yml
   tags: packages
 
-- include: ntp.yml
+- include_tasks: ntp.yml
   tags: ntp
 
-- include: locale.yml
+- include_tasks: locale.yml
   tags: locale
 
-- include: host.yml
+- include_tasks: host.yml
   when: "hostname is defined"
   tags: host
 
-- include: motd.yml
+- include_tasks: motd.yml
   tags: motd
 
